@@ -17,6 +17,9 @@
             <a class="nav-link" href="layout.php?page=list-users">
               Listagem de Usuários
             </a>
+            <a class="nav-link" href="layout.php?page=add-user">
+              Adição de Usuários
+            </a>
           </nav>
         </div>
       </div>
