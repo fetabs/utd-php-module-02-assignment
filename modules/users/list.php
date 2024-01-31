@@ -6,7 +6,7 @@
     </li>
     <li class="breadcrumb-item active">Listagem de Usuários</li>
   </ol>
-  
+
   <div class="card mb-4">
     <div class="card-header">
       <i class="fas fa-table me-1"></i>
@@ -31,7 +31,10 @@
                   <button type="submit">Editar</button>
                 </form>
 
-                <form action="users.php?id=<?= $key; ?>" method="POST">
+                <form 
+                  action="modules/users/users.php?id=<?= $key; ?>" 
+                  method="POST"
+                >
                   <input id="id" name="id" value="<?= $key; ?>" type="hidden" />
                   <input id="name" name="action" value="delete" type="hidden" />
                   <button type="submit">Excluir</button>

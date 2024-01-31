@@ -9,7 +9,16 @@
       $handle = fopen('database.users.txt', 'a+');
       fwrite($handle, implode(' - ', $_POST).PHP_EOL);
       fclose($handle);
-    } 
+    } elseif ($_POST['action'] == 'delete') {
+      unset($_POST['action']);
+
+      $data = file('database.users.txt');
+      unset($data[$_POST['id']]);
+
+      $handle = fopen('database.users.txt', 'w+');
+      fwrite($handle, implode('', $data));
+      fclose($handle);
+    }
 
     header('location: ../../layout.php?page=list-users');
   } else {
