@@ -9,6 +9,16 @@
       $handle = fopen('database.users.txt', 'a+');
       fwrite($handle, implode(' - ', $_POST).PHP_EOL);
       fclose($handle);
+    } elseif ($_POST['action'] == 'update') {
+      $id = $_POST['id'];
+      unset($_POST['action'], $_POST['id'], $_POST['password-confirm']);
+
+      $data = file('database.users.txt');
+      $data[$id] = implode(' - ', $_POST).PHP_EOL;
+
+      $handle = fopen('database.users.txt', 'w+');
+      fwrite($handle, implode('', $data));
+      fclose($handle);
     } elseif ($_POST['action'] == 'delete') {
       unset($_POST['action']);
 

@@ -27,7 +27,8 @@
             <tr>
               <td class="col-4"><?= $dt[0]; ?></td>
               <td>
-                <form action="updateUser.php?id=<?= $key; ?>&token=<?= $token; ?>" method="POST">
+                <form action="modules/users/edit.php?id=<?= $key; ?>&token=<?= $token; ?>" method="POST">
+                
                   <button type="submit">Editar</button>
                 </form>
 

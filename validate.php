@@ -11,7 +11,7 @@
         $data = file('modules/users/database.users.txt');
         include_once 'modules/users/list.php';
         break;
-        
+
       case "add-user":
         $pageTitle = "Adição de Usuário";
         $data = file('modules/users/database.users.txt');
